@@ -141,7 +141,7 @@ def check_sofa(x):
 positive = SIRS_rdd.groupByKey().mapValues(check_SIRS).filter(lambda x: (x[1][0] == 1) & (time_diff_in_hours(x[1][1], x[1][2]) >= 6)).map(lambda x: (x[0], x[1][1], x[1][1] - timedelta(hours=4), x[1][1] - timedelta(hours=5)))
 positive_df = spark.createDataFrame(positive).toDF("ICUSTAY_ID", "ONSET_TIME", "FEATURE1_TIME", "FEATURE2_TIME")
 positive_df.coalesce(1).write.option("header", "true").csv("../data/ONSET.csv")
-print(positive_df.count()) #635
+#print(positive_df.count()) #635
 
 positive_chart = positive_df.join(chart, ["ICUSTAY_ID"])
 feat_list = [220050, 220045, 223761, 220210, 220277, 227013, 220051]
@@ -149,8 +149,8 @@ feat_chart = positive_chart.filter(positive_chart.ITEMID.isin(feat_list)).rdd
 feat_chart.persist()
 feat1 = feat_chart.filter(lambda x: x.FEATURE1_TIME == datetime(x.CHARTTIME.year, x.CHARTTIME.month, x.CHARTTIME.day, x.CHARTTIME.hour))
 feat2 = feat_chart.filter(lambda x: x.FEATURE2_TIME == datetime(x.CHARTTIME.year, x.CHARTTIME.month, x.CHARTTIME.day, x.CHARTTIME.hour))
-print(feat1.count())
-print(feat2.count())
+#print(feat1.count())
+#print(feat2.count())
 
 spark.createDataFrame(feat1).coalesce(1).write.option("header", "true").csv("../data/POS_FEAT1.csv")
 spark.createDataFrame(feat2).coalesce(1).write.option("header", "true").csv("../data/POS_FEAT2.csv")
