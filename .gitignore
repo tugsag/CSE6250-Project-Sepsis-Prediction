@@ -1,5 +1,6 @@
 .DS_Store
 .DS_Store?
+_SUCCESS
 
 # Dataset that are too huge
 # For simplicity, ignore all json and csv for now...
@@ -7,6 +8,7 @@
 *.csv
 *.tsv
 !/mock_data/*.csv
+*.crc
 
 # pickle file
 *.pkl
