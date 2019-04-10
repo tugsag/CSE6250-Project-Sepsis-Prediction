@@ -5,10 +5,10 @@ Zhijing Wu\
 Lu Zheng
 
 ## Environment Setup (assuming base == Python 3.6.8)
-Install pyspark:\
+### Install pyspark
 python -m venv env\
 source ./env/bin/activate\
-pip install pyspark
+pip install pyspark\
 deactivate
 
 ## 1. Compute onset & perform feature extraction
