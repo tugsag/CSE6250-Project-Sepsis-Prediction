@@ -16,12 +16,14 @@ conda env create -f environment.yml
 
 ## 1. Compute onset & feature extraction using PySpark
 source ./env/bin/activate\
-python script/compute_infection.py\
-python script/compute_onset.py\
-python script/positive_features.py\
-python script/negative_features.py\
-deactivate
+cd script\
+python compute_infection.py\
+python compute_onset.py\
+python positive_features.py\
+python negative_features.py\
+deactivate\
+cd ..
 
 ## 2. Feature cleanup; preparation for modelling
-source activate sepsis\
+source activate sepsis
 
