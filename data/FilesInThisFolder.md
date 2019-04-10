@@ -1,7 +1,7 @@
 ## This folder contains the MIMIC data files.
 
 They are not committed to this repo due to privacy concerns.\
-Files needed are:\
+Files needed are:
 
 ADMISSIONS.csv\
 CHARTEVENTS.csv\
