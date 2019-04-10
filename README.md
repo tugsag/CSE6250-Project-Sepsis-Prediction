@@ -14,7 +14,7 @@ deactivate
 ## 1. Compute onset & perform feature extraction
 source ./env/bin/activate\
 python script/compute_onset_feature_extraction.py\
-python script/negative_features.py
+python script/negative_features.py\
 deactivate
 
 ## 2. Feature cleanup; preparation for modelling
