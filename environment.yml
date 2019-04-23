@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - _ipyw_jlab_nb_ext_conf=0.1.0=py36_0
   - _nb_ext_conf=0.4.0=py36_1
   - alabaster=0.7.12=py36_0
   - altair=2.1.0=py_0
@@ -21,8 +20,6 @@ dependencies:
   - automat=0.7.0=py36_0
   - babel=2.6.0=py36_0
   - backcall=0.1.0=py36_0
-  - backports=1.0=py36_1
-  - backports.os=0.1.1=py36_0
   - backports.shutil_get_terminal_size=1.0.0=py36_2
   - beautifulsoup4=4.7.1=py36_1
   - bitarray=0.8.3=py36h1de35cc_0
@@ -338,6 +335,5 @@ dependencies:
   - zope.interface=4.6.0=py36h1de35cc_0
   - zstd=1.3.7=h5bba6e5_0
   - pip:
-    - en-core-web-sm==2.0.0
     - utils==0.9.0
-
+    - pyspark==2.4.1
