@@ -33,7 +33,7 @@ instance/
 
 # Jupyter
 .ipynb_checkpoints
-*.ipynb
+#*.ipynb
 
 # IPython
 profile_default/
