@@ -4,26 +4,34 @@ CSE6250 Big Data Health - Project - Sepsis Prediction
 Zhijing Wu\
 Lu Zheng
 
+## Video Presentation
+Video presentation of this project can be accessed at:
+
 ## Environment Setup (assuming base == Python 3.6.8 with anaconda)
-### Install pyspark inside venv
-python -m venv env\
-source ./env/bin/activate\
-pip install pyspark\
-deactivate
+### Create and activate environment
+conda env create -f environment.yml\
+source activate sepsis
 
-### Create conda environment
-conda env create -f environment.yml 
+## Test saved models (assuming at root)
+jupyter notebook\
+Go to "notebook" folder, open and run "Testing.ipynb"
 
-## 1. Compute onset & feature extraction using PySpark
-source ./env/bin/activate\
+## Complete workflow (assuming ALL raw MIMIC data required are in data/ folder - see the description in that folder for a complete list of dataset needed)
+## 1. Compute onset & feature extraction using PySpark (if PySpark is NOT installed properly during conda env create, please install it using pip)
+source activate sepsis\
 cd script\
 python compute_infection.py\
 python compute_onset.py\
 python positive_features.py\
-python negative_features.py\
-deactivate\
-cd ..
+python negative_features.py
 
-## 2. Feature cleanup; preparation for modelling
-source activate sepsis
+## 2. Feature cleanup, create test set
+python create_train_test_set.py
 
+## 3. Train, tune, validate
+cd ..\
+jupyter notebook\
+Go to "notebook" folder, open and run "Train_Validate.ipynb"
+
+## 4. Testing
+open and run "Testing.ipynb"
