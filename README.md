@@ -18,7 +18,8 @@ Go to "notebook" folder, open and run "Testing.ipynb"
 
 ## Complete workflow
 (assuming ALL raw MIMIC data required are in data/ folder - see the description in that folder for a complete list of dataset needed)
-### 1. Compute onset & feature extraction using PySpark (if PySpark is NOT installed properly during conda env create, please install it using pip)
+### 1. Compute onset & feature extraction using PySpark 
+(if PySpark is NOT installed properly during conda env create -f environment.yml, please install it using pip)\
 source activate sepsis\
 cd script\
 python compute_infection.py\
@@ -34,5 +35,5 @@ cd ..\
 jupyter notebook\
 Go to "notebook" folder, open and run "Train_Validate.ipynb"
 
-## 4. Testing
+### 4. Testing
 open and run "Testing.ipynb"
