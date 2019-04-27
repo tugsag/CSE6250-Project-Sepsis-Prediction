@@ -8,13 +8,12 @@ Lu Zheng
 Video presentation of this project can be accessed at:
 
 ## Environment Setup (assuming base with anaconda)
-### Create and activate environment
+### Create environment
 conda env create -f environment.yml\
-source activate sepsis
 
 ## Test saved models (assuming at root)
 jupyter notebook\
-Go to "notebook" folder, open and run "Testing.ipynb" (make sure kernel is "sepsis")
+Go to "notebook" folder, open and run "Testing.ipynb" **(make sure kernel is set to "sepsis")**
 
 ## Complete workflow
 (assuming ALL raw MIMIC data required are in data/ folder - see the description in that folder for a complete list of dataset needed)
@@ -33,7 +32,7 @@ python create_train_test_set.py
 ### 3. Train, tune, validate
 cd ..\
 jupyter notebook\
-Go to "notebook" folder, open and run "Train_Validate.ipynb" (make sure kernel is "sepsis")
+Go to "notebook" folder, open and run "Train_Validate.ipynb" **(make sure kernel is set to "sepsis")**
 
 ### 4. Testing
-open and run "Testing.ipynb" (make sure kernel is "sepsis")
+open and run "Testing.ipynb" **(make sure kernel is set to "sepsis")**
