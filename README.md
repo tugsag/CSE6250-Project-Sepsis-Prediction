@@ -9,7 +9,7 @@ Video presentation of this project can be accessed at:
 
 ## Environment Setup (assuming base with anaconda)
 ### Create environment
-conda env create -f environment.yml\
+conda env create -f environment.yml
 
 ## Test saved models (assuming at root)
 jupyter notebook\
