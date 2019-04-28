@@ -5,7 +5,7 @@ Zhijing Wu\
 Lu Zheng
 
 ## Video Presentation
-Video presentation of this project can be accessed at:
+Video presentation of this project can be accessed at: https://youtu.be/95btdwOevu4
 
 ## Environment Setup (assuming base with anaconda)
 ### Create environment
@@ -27,7 +27,8 @@ python positive_features.py\
 python negative_features.py
 
 ### 2. Feature cleanup, create test set
-python create_train_test_set.py
+python create_train_test_set.py\
+source deactivate
 
 ### 3. Train, tune, validate
 cd ..\
