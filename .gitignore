@@ -13,6 +13,9 @@ _SUCCESS
 # pickle file
 *.pkl
 
+# sklearn model file
+*.joblib
+
 # Python complile
 __pycache__/
 *.py[cod]
